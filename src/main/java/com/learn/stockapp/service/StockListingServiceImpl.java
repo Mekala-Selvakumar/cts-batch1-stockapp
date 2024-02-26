@@ -35,6 +35,11 @@ public class StockListingServiceImpl implements StockListingService {
     private StockRepository stockRepository;
  
  
+    public void setApi_url(String api_url) {
+        this.api_url = api_url;
+    }
+    
+   
 
     @Override
     public StockList getStocksByCountryFromAPI(String country) {

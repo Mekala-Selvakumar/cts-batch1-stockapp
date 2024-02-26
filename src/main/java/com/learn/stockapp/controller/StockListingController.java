@@ -48,7 +48,9 @@ public class StockListingController {
 
     @GetMapping("/api/{country}")
     public ResponseEntity<StockList> getStocksByCountryFromAPI(@PathVariable String country) {
+       System.out.println("In Controller");
         StockList stockList = stockListingService.getStocksByCountryFromAPI(country);
+       System.out.println(stockList.getData());
         return ResponseEntity.ok(stockList);
     }
 
